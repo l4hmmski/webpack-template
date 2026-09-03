@@ -8,14 +8,19 @@
     "start": "webpack serve --open",
     "dev": "webpack serve --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
-    "deploy": "npm run build && git subtree push --prefix dist origin gh-pages"
+    "deploy": "npm run build && gh-pages -d dist",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "module",
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
     "css-loader": "^7.1.4",
+    "eslint": "^10.9.1",
+    "globals": "^17.11.0",
     "html-webpack-plugin": "^5.6.8",
     "style-loader": "^4.0.0",
     "webpack": "^5.110.1",
