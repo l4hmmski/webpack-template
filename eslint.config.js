@@ -54,4 +54,28 @@ export default defineConfig([
       },
     },
   },
+  {
+  files: [
+    "**/*.test.js",
+    "**/*.spec.js",
+  ],
+
+  plugins: {
+    js,
+  },
+
+  extends: [
+    "js/recommended",
+  ],
+
+  languageOptions: {
+    ecmaVersion: "latest",
+    sourceType: "module",
+
+    globals: {
+      ...globals.jest,
+      ...globals.node,
+    },
+  },
+},
 ]);
