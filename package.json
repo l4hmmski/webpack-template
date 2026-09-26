@@ -4,19 +4,20 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-  "dev": "webpack serve --config webpack.dev.js",
-  "build": "webpack --config webpack.prod.js",
-  "deploy": "npm run build && gh-pages -d dist",
-  "lint": "eslint .",
-  "lint:fix": "eslint . --fix",
-  "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
-  "test:watch": "node --experimental-vm-modules node_modules/jest/bin/jest.js --watch"
-},
+    "dev": "webpack serve --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js",
+    "deploy": "npm run build && gh-pages -d dist",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "module",
   "devDependencies": {
+    "@babel/preset-env": "^7.29.7",
     "@eslint/js": "^10.0.1",
     "css-loader": "^7.1.4",
     "eslint": "^10.9.1",
